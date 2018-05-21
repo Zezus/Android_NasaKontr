@@ -16,8 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import okhttp3.OkHttpClient;
@@ -60,17 +58,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         getBtn.setOnClickListener(view -> {
-            date1 = new Date
+            int y = datePicker.getYear();
+            int m = datePicker.getMonth();
+            int d = datePicker.getDayOfMonth();
+            String day = String.valueOf(y) + "-" + String.valueOf(m) + "-" + String.valueOf(d);
 
-                    (datePicker.getYear() - 1900, datePicker.getMonth(), datePicker.getDayOfMonth());
-            try {
-                date1 = new SimpleDateFormat("yyyy-mm-dd").parse(date1.toString());
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-            Toast.makeText(getApplicationContext(), date1.toString(), Toast.LENGTH_LONG).show();
-            new NetAsyncTask().execute("https://api.nasa.gov/planetary/apod?api_key=02w697sj1HAG7Hs4FDEcUMWLnTTdqdi6CymypBz4");
 
+//                    date1 = new Date
+//
+//                    (datePicker.getYear() - 1900, datePicker.getMonth(), datePicker.getDayOfMonth());
+//            try {
+//                date1 = new SimpleDateFormat("yyyy-MM-dd").parse(date1.toString());
+//            } catch (ParseException e) {
+//                e.printStackTrace();
+//            }
+            Toast.makeText(getApplicationContext(), day, Toast.LENGTH_LONG).show();
+            textView.setText(day);
+            new NetAsyncTask().execute("https://api.nasa.gov/planetary/apod?date=" + day + "&api_key=02w697sj1HAG7Hs4FDEcUMWLnTTdqdi6CymypBz4");
 
         });
 
@@ -148,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             intent.putExtra("date", date2);
             intent.putExtra("title", title2);
+            intent.putExtra("url", url2);
             startActivity(intent);
 
         }

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NASAKontr.iml" filepath="$PROJECT_DIR$/NASAKontr.iml" />
+      <module fileurl="file://D:\Android\Kontr_Work\NasaKontr\NASAKontr.iml" filepath="D:\Android\Kontr_Work\NasaKontr\NASAKontr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NasaKontr.iml" filepath="$PROJECT_DIR$/.idea/NasaKontr.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Android\Kontr_Work\NasaKontr\app\app.iml" filepath="D:\Android\Kontr_Work\NasaKontr\app\app.iml" />
     </modules>
   </component>
 </project>
