@@ -24,6 +24,6 @@ public class AboutActivity extends AppCompatActivity {
         String title = getIntent().getExtras().getString("title");
 
         textView1.setText(date);
-        textView1.setText(title);
+        textView2.setText(title);
     }
 }
