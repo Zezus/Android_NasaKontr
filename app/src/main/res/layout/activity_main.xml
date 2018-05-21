@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nasa_kontr.MainActivity">
+
+
+    <DatePicker
+        android:id="@+id/am_datePicker"
+        android:layout_width="342dp"
+        android:layout_height="397dp" />
+
+    <Button
+        android:id="@+id/am_button_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/am_datePicker" />
+
+    <TextView
+        android:id="@+id/am_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/am_button_get" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nasa_kontr.AboutActivity">
+
+
+    <TextView
+        android:id="@+id/ab_1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/ab_2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <WebView
+        android:id="@+id/ab_web"
+        android:layout_width="368dp"
+        android:layout_height="371dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+</android.support.constraint.ConstraintLayout>
